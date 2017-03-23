@@ -1,8 +1,12 @@
 #usare python2
 import string
-
-filehandle = open("proteine_mitilo_nr.clstr", 'r')
-outputhandle = open("ptroteine_mitilo_coppie.csv", 'w')
+inputname=""
+outputname=""
+if (inputname == "" or outputname == ""):
+    print("please define input/output in script file")
+    exit()
+filehandle = open(inputname, 'r')
+outputhandle = open(outputname, 'w')
 intero = str(filehandle.read())
 vect = intero.split("\n>")
 coppie = 0
